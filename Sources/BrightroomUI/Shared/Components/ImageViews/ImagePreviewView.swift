@@ -32,11 +32,11 @@ public final class ImagePreviewView: PixelEditorCodeBasedView {
   // MARK: - Properties
 
   #if false
-  private let imageView = _PreviewImageView()
-  private let originalImageView = _PreviewImageView()
+  private(set) imageView = _PreviewImageView()
+  private(set) originalImageView = _PreviewImageView()
   #else
-  private let imageView = MetalImageView()
-  private let originalImageView = MetalImageView()
+  private(set) imageView = MetalImageView()
+  private(set) originalImageView = MetalImageView()
   #endif
 
   private let editingStack: EditingStack
